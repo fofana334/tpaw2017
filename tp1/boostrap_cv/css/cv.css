@@ -1,0 +1,39 @@
+
+/**** main cv***/
+body{
+	background-color: gray;
+}
+
+table{
+	background-color: white;
+	/*border-collapse: collapse;*/
+    caption-side: top; /* top: pour titre en dessus (default) ou bottom pour placer titre en dessous;*/
+
+    /** pour avoir un tableau qui s'affiche sur toute larger de la page */
+    width: 100%;
+    border: 1;
+}
+
+table,th, td  /* Mettre une bordure sur les td ET les th */
+{
+    border: 3px solid blue;
+}
+
+
+a:hver{
+	text-decoration: underline;
+    color: green;
+}
+
+#title{
+	text-align: center;
+}
+
+img{
+	width:66px;
+	height:66px;
+}
+
+.body__cv{
+	border: 6px solid blue;
+}
