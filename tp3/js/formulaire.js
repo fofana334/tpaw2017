@@ -20,12 +20,12 @@ $(function() {
         $('.modal-body').html("Veuillez entrer un prenom valide");
           valid=false;
       }
-      else if ($("date").val()=="") {
+      else if ($("#date").val()=="") {
         $('.modal').modal('show');
         $('.modal-body').html("Veuillez entrer une date valide");
           valid=false;
       }
-      else if ($("adresse").val()=="") {
+      else if ($("#adresse").val()=="") {
         $('.modal').modal('show');
         $('.modal-body').html("Veuillez entrer un adresse valide");
           valid=false;

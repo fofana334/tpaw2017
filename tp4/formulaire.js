@@ -1,30 +1,4 @@
-$(function() {
 
-  //La fonction s'active sur l'évènement keydown dans la zone de texte
-    $("#zone").keydown(function(limit) {
-
-      //Définir la limite à atteindre
-      var limit = "10";
-
-      //Récupérer le nombre de caractères dans la zone de texte
-      var currlength = $(this).val().length;
-
-      //Afficher un texte de légende en fonction du nombre de caractères
-      if(currlength >= limit){
-        $("#legende").removeClass("insuffisant").addClass("suffisant").html("Vous avez saisi " + currlength + " caractères sur " + limit + ", c'est suffisant, mais si vous êtes inspiré, vous pouvez continuer.");
-      }
-      else{
-        $("#legende").removeClass("suffisant").addClass("insuffisant").html("Vous avez saisi " + currlength + " caractères sur " + limit + ", c'est encore trop peu.");
-      }
-
-    });
-
-  var valid,name,prenom,date,adresse,mail;
-  valid = true;
-  $("#gps_run").click(function(){
-
-    });
-});
 
 var x = document.getElementById("gps_run");
 
@@ -61,3 +35,27 @@ function showError(error) {
             break;
     }
 }
+
+
+
+
+$(function() {
+  var i=0,a=0,b=0, c=0, d=0;
+  $("#inputName").keypress(function(){
+    $("#nameChar").text(i += 1 ,"car.");
+    });
+  $("#inputPrenom").keypress(function(){
+    $("#prenomChar").text(a += 1 ,"car.");
+    });
+  $("#inputDate").keypress(function(){
+    $("#dateChar").text(b += 1 ,"car.");
+    });
+  $("#inputAdresse").keypress(function(){
+    $("#adresseChar").text(c += 1 ,"car.");
+    });
+  $("#inputEmail").keypress(function(){
+    $("#mailChar").text(d += 1 ,"car.");
+    });
+
+
+}); 
