@@ -58,4 +58,10 @@ $(function() {
     });
 
 
-}); 
+});
+
+
+function validate(){
+  $("#messageLonging").html("<p> Bravo ! le formulaire est sauvegardé.</p>");
+  $("#messageLonging").css("background-color","green");
+} 
