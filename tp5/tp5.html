@@ -4,26 +4,70 @@
 	<meta charset="utf-8">
 	<title>TP5-JS+Méteo</title>
 	<!-- lib importation -->
-	<link rel="stylesheet" href="http://getbootstrap.com/dist/css/bootstrap.min.css"> <script src="​/js/meteo​.js"></script>
+	<link rel="stylesheet" href="http://getbootstrap.com/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="tp5.css">
+	<script type="text/javascript" src="meteo.js"></script>
 </head>
 <body>
+<div class="page_content">
+		<form id="searchCity" class="form-inline" role="search">
+			<div class="row">
+				
+				<div class="col-lg-12">
+					<div class="input-group">
+						<span class="input-group-btn">
+		        			<button class="btn btn-warning" type="button" id="gps" onclick="getLocation()">GPS</button>
+		      			</span>
+							<input type="search"  class="form-control" id="city" required placeholder="london " />
+						<span class="input-group-btn">
+							<button type="submit" class="btn btn-primary">Recherche</button>	
+						</span>
+					</div> <!-- /input-groupe-->
+				</div><!-- /col-lg-6 -->
+			</div> <!--row -->
 
-<form id=”searchCity” class="form-inline" role="search">
-	<div class="row">
-		
-		<div class="col-lg-6">
-			<div class="input-group">
-				<input type=”search”  class="form-control" id=”city” required placeholder="london " />
-			<span class="input-group-btn">
-				<button type=”submit” class="btn btn-primary">Recherche</button>	
-			</span>
-		</div> <!-- /input-groupe-->
-		</div><!-- /col-lg-6 -->
-	</div> <!--row -->
+		</form>
+		<div id="result" hidden="hidden">
 
-</form>
-<div id=”result”></div>
+			
+			<div class="header__content">
+				<table class="table">
+					<thead >
+						<legend id="nameCity"></legend>
+					</thead>
+					<tbody>
+						<tr>
+							<td id="image_meteo" class="col-lg-12"></td>
+						</tr>
+						<tr>
+							<td class="col-lg-6">Humidity</td>
+							<td id="Humidity_value" class="col-lg-6"></td>
+						</tr>
+						<tr>
+							<td class="col-lg-6">Nuage</td>
+							<td id="Nuage_value" class="col-sm-6"></td>
+						</tr>
+						<tr>
+							<td class="col-lg-6">Vent</td>
+							<td id="Vent_value" class="col-sm-6"></td>
+						</tr>
+						 <tr>
+						 	<td class="col-lg-6">Lat</td>
+						 	<td id="lat" class="col-lg-6"></td>
+						 </tr>
+						  <tr>
+						 	<td class="col-lg-6">Long</td>
+						 	<td id="long" class="col-lg-6"></td>
+						 </tr>
+						<tr>
+							<td id="map" class="col-lg-12"></td>
+							
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+</div> <!-- page__content -->
 
-<!--div keyAPI=b9cb9ca0d7d6d13d047ec6b795d6fc31></div-->
 </body>
 </html>
