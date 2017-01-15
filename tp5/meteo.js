@@ -22,13 +22,17 @@ function searchCity(_city){
 			 var resp       = JSON.parse(request.responseText);
 			 var img_url    = "http://openweathermap.org/img/w/02d.png";
 			 var imgGPS_url = "http://maps.googleapis.com/maps/api/staticmap?markers="+resp.coord.lat+","+resp.coord.lon+"&size=640x400&zoom=5";
+			 //var icon = ("<img src='https://erikflowers.github.io/weather-icons/" + weatherDataIn.weather[0].icon + ".png'>");
+			 var icon       = resp.weather[0].icon;
+			 var iconSrc    ="http://openweathermap.org/img/w/" + icon + ".png";
 			 //VOTRE CODE JS pour afficher les données météo sur votre page
 			 // en mettant à jour la DIV “result
-			 document.getElementById("nameCity").innerHTML       = resp.name;
-			 document.getElementById("Humidity_value").innerHTML = resp.main.humidity;
-			 document.getElementById("Nuage_value").innerHTML    = resp.clouds.all;
-			 document.getElementById("Vent_value").innerHTML     = resp.wind.speed;
-			 document.getElementById("image_meteo").innerHTML    = "<img src='"+img_url+"'>";
+			 document.getElementById("nameCity").innerHTML       = resp.name ;
+			 //document.getElementById("hours").innerHTML          = resp.snow.3h;
+			 document.getElementById("Humidity_value").innerHTML = resp.main.humidity + "%";
+			 document.getElementById("Nuage_value").innerHTML    = resp.clouds.all    +"%";
+			 document.getElementById("Vent_value").innerHTML     = resp.wind.speed    +"m/s";
+			 document.getElementById("image_meteo").innerHTML    = "<img src='"+iconSrc+"'>";
 			 document.getElementById("map").innerHTML      = "<img src='"+imgGPS_url+"'>";
 
 			 document.getElementById("result").removeAttribute("hidden");
@@ -109,6 +113,8 @@ function showError(error) {
             break;
     }
 }
+
+
 
 /*function afficher_cacher(id)
 {

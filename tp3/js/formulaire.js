@@ -33,7 +33,7 @@ $(function() {
       else{
         $('.modal').modal('show');
         $('.modal-body').html('<p>Bienvenue</p>'+
-                            '<a <img src=""/>');
+         '<a <img src="http://images.google.fr/imgres?imgurl=http://www.harvard.edu/sites/default/files/content/harvard-map-google.jpg&imgrefurl=http://www.harvard.edu/about-harvard/maps-directions&h=433&w=850&tbnid=rq9-cQJL7x48iM:&vet=1&tbnh=90&tbnw=177&docid=fRB0UjZ_ueyH0M&usg=__vLH2sIS46CuB_Hsd1_FCe50bdoo=&sa=X&sqi=2&ved=0ahUKEwiH7cT3oMXRAhVFWxoKHVVXAT8Q9QEIPTAG"/>');
         return valid;
       }
     });

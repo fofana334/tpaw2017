@@ -38,6 +38,7 @@ function showError(error) {
 
 
 
+// Methode 1
 
 $(function() {
   var i=0,a=0,b=0, c=0, d=0;
@@ -60,6 +61,13 @@ $(function() {
 
 });
 
+//Methode 2
+//$(document).ready(function(){
+  //    $("#inputName").keyup(function(){
+   // $("#nameChar").text(().val().length);
+    //});
+      
+    //});
 
 function validate(){
   $("#messageLonging").html("<p> Bravo ! le formulaire est sauvegardé.</p>");
