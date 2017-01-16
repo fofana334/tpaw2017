@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js"></script>
+</head>
+
+<body ng-app="myapp">
+
+
+<ol>
+   <li ng-repeat="(name, value) in myData.myObject">{{name}} = {{value}}</li>
+</ol>
+
+<script>
+    angular.module("myapp", [])
+    .controller("MyController", function($scope) {
+        $scope.myData = {};
+        $scope.myData.myObject = { var1 : "val1", var2 : "val3", var3 : "val3"};
+    });
+
+
+
+   /*
+   <ol>
+   <li ng-repeat="theItem in myData.items">{{theItem.text}}</li>
+</ol>
+
+
+    angular.module("myapp", [])
+    .controller("MyController", function($scope) {
+        $scope.myData = {};
+        $scope.myData.items = [ {text : "one"}, {text : "two"}, {text : "three"} ];
+    });
+    </
+
+
+
+<ol>
+   <li ng-repeat="theItem in myData.getItems()">{{theItem.text}}</li>
+</ol>
+
+
+    angular.module("myapp", [])
+    .controller("MyController", function($scope) {
+        $scope.myData = {};
+        $scope.myData.items = [ {text : "one"}, {text : "two"}, {text : "three"} ];
+        $scope.myData.getItems = function() { return this.items; };
+    });*/
+
+
+</script>
+</body>
+</html>

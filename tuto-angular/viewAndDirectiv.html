@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js"></script>
+</head>
+
+<body ng-app="myapp">
+
+  <div ng-controller="MyController" >
+      <span>{{myData.textf()}}</span>
+  </div>
+
+<!-- lexpl ci desus est interpolation on le rmplcer par  
+<div ng-controller="MyController" >
+  <span ng-bind="myData.textf()"></span>
+</div>
+-->
+<div ng-controller="MyControllershowHide" >
+      <span ng-show="myDatas.showIt">hello show</span>
+      <span ng-hide="myDatas.showIt">hello hide</span>
+  </div>
+
+  <script>
+    angular.module("myapp", [])
+    .controller("MyController", function($scope) {
+      $scope.myData = {};
+      $scope.myData.textf = function() { return "A text from a function"; };
+    });
+
+    //<!-- shows or hides -->
+    angular.module("myapp", [])
+    .controller("MyControllershowHide", function($scope) {
+      $scope.myDatas = {};
+      $scope.myDatas.showIt = true;
+    });
+  </script>
+
+</body>
+</html>
