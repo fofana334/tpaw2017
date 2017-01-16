@@ -14,7 +14,7 @@ meteoApp.config(['$routeProvider',
 
 		/* Si l'URL est inconnue , on redirige vers la page #/home */
 
-		otherwise({
+		.otherwise({
 			redirectTo : '/home'
 		});
 
